@@ -7,6 +7,10 @@ var gapType = [
     {max: 31536000, suffix: " 个月前"}
 ];
 
+pad = function (n) {
+    return (n < 10) ? '0' + n : n;
+}
+
 timeSince = function (date) {
     var gap = (new Date().getTime() - date) / 1000;
     var i = 0;
@@ -26,7 +30,7 @@ var dateItem = document.getElementsByTagName("time");
 for (let i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         let enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + enTime.getMonth() + " 月 " + enTime.getDay() + " 日 " + enTime.getHours().toFixed(2) + ":" + enTime.getMinutes().toFixed(2);
+        dateItem[i].title = enTime.getFullYear() + " 年 " + enTime.getMonth() + " 月 " + enTime.getDay() + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }
 }
