@@ -4,7 +4,7 @@ var gapType = [
     {max: 86400, suffix: " 小时前"},
     {max: 604800, suffix: " 天前"},
     {max: 2592000, suffix: " 周前"},
-    {max: 31536000, suffix: " 月前"}
+    {max: 31536000, suffix: " 个月前"}
 ];
 
 timeSince = function (date) {
