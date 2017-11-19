@@ -126,6 +126,7 @@ pre{
     overflow-x: auto;
     border-radius: 5px;
     background: #23241f;
+    max-height: 78vh;
 }
 
 pre code{

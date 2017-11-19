@@ -53,13 +53,13 @@ body {
 }
 
 code::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
 }
 
 code::-webkit-scrollbar-button {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
 }
 
 code::-webkit-scrollbar-track {
