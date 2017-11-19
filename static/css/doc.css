@@ -110,6 +110,7 @@ header .head-menu li.active a{
         transform: scaleY(0);
         transition: height 0.3s, transform 0.3s;
         transform-origin: top center;
+        overflow: hidden;
     }
     header .head-menu.active{
         max-height: 4096px;
