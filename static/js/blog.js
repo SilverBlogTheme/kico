@@ -19,7 +19,7 @@ timeSince = function (date) {
             return Math.floor(gap / ((i <= 0) ? 1 : gapType[i - 1].max)) + gapType[i].suffix;
         } else if (gap > gapType[gapType.length - 1].max || gap < 0 || i >= gapType.length) {
             var ds = new Date(date);
-            return ds.getFullYear() + " 年 " + ds.getMonth() + " 月 " + ds.getDay() + " 日";
+            return ds.getFullYear() + " 年 " + (ds.getMonth() + 1) + " 月 " + (ds.getDay() + 1) + " 日";
         } else {
             i += 1;
         }
@@ -30,7 +30,7 @@ var dateItem = document.getElementsByTagName("time");
 for (let i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         let enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + enTime.getMonth() + " 月 " + enTime.getDay() + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
+        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDay() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }
 }
