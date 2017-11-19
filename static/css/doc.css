@@ -104,16 +104,15 @@ header .head-menu li.active a{
         display: block;
     }
     header .head-menu{
-        max-height: 0;
+        height: 0;
         overflow: hidden;
         background: #fff;
         transform: scaleY(0);
         transition: height 0.3s, transform 0.3s;
         transform-origin: top center;
-        overflow: hidden;
     }
     header .head-menu.active{
-        max-height: 4096px;
+        height: 340px;
         transform: scaleY(1);
     }
     header .head-menu, header .head-menu li{
