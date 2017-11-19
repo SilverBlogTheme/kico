@@ -30,7 +30,7 @@
             <h3 class="site-title">{{ system_config.Project_Name }}</h3>
             <div class="toggle-btn"></div>
         </div>
-        <ul class="head-menu">
+        <ul class="head-menu" id="head-menu">
             <li><a href="/">博客</a></li>{% for item in menu_list %}
             {% if "absolute" in item %}
                 {% set url = item.absolute %}
