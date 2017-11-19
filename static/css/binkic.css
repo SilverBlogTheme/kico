@@ -125,11 +125,11 @@ pre{
     margin: 0 0 1em;
     overflow-x: auto;
     border-radius: 5px;
-    background: #333333;
+    background: #23241f;
 }
 
 pre code{
-    background: #333;
+    background: #23241f;
     color: #fff;
 }
 
