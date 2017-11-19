@@ -104,7 +104,7 @@ header .head-menu li.active a{
         display: block;
     }
     header .head-menu{
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         background: #fff;
         transform: scaleY(0);
@@ -112,7 +112,7 @@ header .head-menu li.active a{
         transform-origin: top center;
     }
     header .head-menu.active{
-        height: 260px;
+        max-height: 4096px;
         transform: scaleY(1);
     }
     header .head-menu, header .head-menu li{
