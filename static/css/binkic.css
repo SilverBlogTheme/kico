@@ -117,6 +117,7 @@ code{
     padding: .25em .5em;
     border-radius: 4px;
     background: #f7f2f4;
+    max-height: 78vh;
 }
 
 pre{
@@ -126,7 +127,6 @@ pre{
     overflow-x: auto;
     border-radius: 5px;
     background: #23241f;
-    max-height: 78vh;
 }
 
 pre code{
