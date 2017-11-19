@@ -36,7 +36,7 @@ if (url_path !== "") {
     }
 }
 
-links[index].parentNode.className = 'nav-list-link active';
+links[index].parentNode.className = 'active';
 
 var dateItem = document.getElementsByTagName("time");
 for (let i in dateItem) {
