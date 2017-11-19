@@ -1,0 +1,18 @@
+{% include system_config.Theme+"/include/header.html" %}
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap min">
+            <h1>{{ page_info.title }}</h1>
+            <p><time>{{ page_info.time }}</time></p>
+        </div>
+    </div>
+    <div class="docs-content">
+        <div class="wrap min article-block">
+            <section id="start">
+                <div class="section-content">{{ content|safe }}</div>
+            </section>
+        </div>
+        <div class="wrap min article-comment">{% include "include/comment.html" %}</div>
+    </div>
+</main>
+{% include system_config.Theme+"/include/footer.html" %}

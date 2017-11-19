@@ -1,0 +1,10 @@
+<footer>
+    <p>© {{ now_time|datetimeformat("%Y") }} <a href="/">{{ system_config.Project_Name }}</a>, based on <a href="https://kico.binkic.com/style/index.html" target="_blank">Kico Style</a> & <a href="http://github.com/SilverBlogTeam/SilverBlog" target="_blank">SilverBlog</a>.</p>
+</footer>
+<script src="/static/{{ system_config.Theme }}/js/docs.js"></script>
+<script src="/static/{{ system_config.Theme }}/js/binkic.js"></script>
+<script src="/static/{{ system_config.Theme }}/js/blog.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+{% include "include/foot.html" ignore missing %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% include system_config.Theme+"/include/header.html" %}
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap min">
+            <h1>{{ system_config.Project_Name }}</h1>
+            <p>{{ system_config.Project_Description }}</p>
+        </div>
+    </div>
+    <div class="docs-content">{% for page_info in page_list %}
+        <div class="wrap min article-block">
+            <section id="start">
+                <div class="section-title">
+                    <h2><a href="/{{ page_info.name }}{% if static %}.html{% endif %}">{{ page_info.title }}</a></h2>
+                    <time class="article-info">{{ page_info.time }}</time>
+                </div>
+                <div class="section-content">{{ page_info.excerpt }}</div>
+            </section>
+        </div>{% endfor %}
+        <div class="wrap min page-nav">
+            {% if now_page!=1 %}<a class="nav-link nav-prev" href="/index/p/{{ now_page - 1 }}{% if static %}.html{% endif %}">上一页</a>{% endif %}
+            {% if now_page!=page_row and page_row !=1 %}<a class="nav-link nav-next" href="/index/p/{{ now_page + 1 }}{% if static %}.html{% endif %}">下一页</a>{% endif %}</div>
+        </div>
+    </div>
+</main>
+{% include system_config.Theme+"/include/footer.html" %}

@@ -1,0 +1,53 @@
+* {
+    letter-spacing: 0.04em;
+}
+
+body {
+    background-color: #3498db;
+}
+
+.container {
+    background-color: #FFF;
+}
+
+.article-block {
+    padding-bottom: 2.3em;
+}
+
+.article-info {
+    color: #999;
+}
+
+.section-content {
+    line-height: 1.66em;
+}
+
+.page-nav {
+    padding-bottom: 60px;
+}
+
+.nav-link {
+    color: #222;
+    display: block;
+    padding: 5px 10px;
+    margin-right: .5em;
+    border-radius: 30px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: #ffc670;
+}
+
+.nav-prev {
+    float: left
+}
+
+.nav-next {
+    float: right
+}
+
+.article-comment {
+    padding-bottom: 2.2em;
+}
