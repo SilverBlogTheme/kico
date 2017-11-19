@@ -112,7 +112,7 @@ header .head-menu li.active a{
         transform-origin: top center;
     }
     header .head-menu.active{
-        height: 340px;
+        height: 210px;
         transform: scaleY(1);
     }
     header .head-menu, header .head-menu li{

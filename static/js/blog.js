@@ -22,7 +22,7 @@ timeSince = function (date) {
     }
 }
 
-var dateItem = document.getElementsByClassName("date");
+var dateItem = document.getElementsByTagName("time");
 for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         let enTime = new Date(dateItem[i].innerHTML);
