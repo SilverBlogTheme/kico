@@ -52,23 +52,24 @@ body {
     padding-bottom: 2.2em;
 }
 
-::-webkit-scrollbar {
-    width: 6px;
+pre::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
 }
 
-::-webkit-scrollbar-button {
-    width: 6px;
-    height: 0;
+pre::-webkit-scrollbar-button {
+    width: 4px;
+    height: 4px;
 }
 
-::-webkit-scrollbar-track {
+pre::-webkit-scrollbar-track {
     background: #23241f;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #34352e;
+pre::-webkit-scrollbar-thumb {
+    background: #60615d;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #3a3b35;
+pre::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
 }
