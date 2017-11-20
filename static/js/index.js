@@ -17,7 +17,7 @@ request.onload = function () {
                 str += '<h2>' + year + ' 年</h2><ul>';
             }
             var arTime = new Date(list[i].time);
-            str += '<li>' + (arTime.getMonth() + 1) + " 月 " + (arTime.getDate() + 1) + " 日："
+            str += '<li>' + (arTime.getMonth() + 1) + " 月 " + arTime.getDate() + " 日："
                 + '<a href="/' + list[i].name + '">' + list[i].title + '</a></li>';
         }
         aContainer.innerHTML = str;
