@@ -13,11 +13,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#3498db">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
     <link href="/static/{{ system_config.Theme }}/css/index.min.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="{{ system_config.Project_Name }}" href="/rss">
     {% include "include/head.html" ignore missing %}
 </head>
@@ -25,11 +26,10 @@
 <header>
     <div class="wrap min">
         <div class="head-title">
-            <h3 class="site-title">{{ system_config.Project_Name }}</h3>
+            <h3 class="site-title"><a href="/">{{ system_config.Project_Name }}</a></h3>
             <div class="toggle-btn"></div>
         </div>
-        <ul class="head-menu" id="head-menu">
-            <li><a href="/">博客</a></li>{% for item in menu_list %}
+        <ul class="head-menu" id="head-menu">{% for item in menu_list %}
             {% if "absolute" in item %}
                 {% set url = item.absolute %}
             {% else %}
