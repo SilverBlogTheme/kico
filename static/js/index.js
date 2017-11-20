@@ -17,7 +17,7 @@ request.onload = function () {
                 str += '<h2>' + year + ' 年</h2><ul>';
             }
             var arTime = new Date(list[i].time);
-            str += '<li>' + (arTime.getMonth() + 1) + " 月 " + (arTime.getDay() + 1) + " 日："
+            str += '<li>' + (arTime.getMonth() + 1) + " 月 " + (arTime.getDate() + 1) + " 日："
                 + '<a href="/' + list[i].name + '">' + list[i].title + '</a></li>';
         }
         aContainer.innerHTML = str;
@@ -159,7 +159,7 @@ var dateItem = document.getElementsByTagName("time");
 for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         var enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDay() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
+        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDate() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }
 }

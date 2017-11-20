@@ -30,7 +30,7 @@ var dateItem = document.getElementsByTagName("time");
 for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         var enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDay() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
+        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDate() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }
 }
