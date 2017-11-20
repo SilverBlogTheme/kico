@@ -1,0 +1,32 @@
+{
+  "name": "kico",
+  "version": "1.0.0",
+  "description": "kico silverblog theme based on kico style",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcdw/kico.git"
+  },
+  "keywords": [
+    "kico",
+    "blog",
+    "theme",
+    "template",
+    "silverblog"
+  ],
+  "author": "Dreamer-Paul, tcdw <admin@tcdw.net>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/tcdw/kico/issues"
+  },
+  "homepage": "https://github.com/tcdw/kico#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-order": "^1.1.1"
+  }
+}
