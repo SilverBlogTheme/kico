@@ -2,7 +2,7 @@
 
 由 Kico Style 修改而来的博客主题，并应用到 SilverBlog 上。
 
-![首页图](https://raw.githubusercontent.com/tcdw/kico/master/kico-preview.png)
+![首页图](https://raw.githubusercontent.com/SilverBlogTheme/kico/master/kico-preview.png)
 
 ## 安装
 
