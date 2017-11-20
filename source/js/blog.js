@@ -19,7 +19,7 @@ timeSince = function (date) {
             return Math.floor(gap / ((i <= 0) ? 1 : gapType[i - 1].max)) + gapType[i].suffix;
         } else if (gap > gapType[gapType.length - 1].max || gap < 0 || i >= gapType.length) {
             var ds = new Date(date);
-            return ds.getFullYear() + " 年 " + (ds.getMonth() + 1) + " 月 " + (ds.getDay() + 1) + " 日";
+            return ds.getFullYear() + " 年 " + (ds.getMonth() + 1) + " 月 " + ds.getDate() + " 日";
         } else {
             i += 1;
         }
