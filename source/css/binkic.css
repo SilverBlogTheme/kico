@@ -132,6 +132,7 @@ pre{
 pre code{
     background: #23241f;
     color: #fff;
+    line-height: 1.72em;
 }
 
 pre::-webkit-scrollbar-track-piece{
