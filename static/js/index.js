@@ -6,7 +6,7 @@ request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
         var list = JSON.parse(request.responseText);
         var year = 0;
-        var str = "<ul>";
+        var str = "";
         for (var i in list) {
             var t = new Date(list[i].time).getFullYear();
             if (t != year) {
@@ -20,7 +20,6 @@ request.onload = function () {
             str += '<li>' + (arTime.getMonth() + 1) + " 月 " + (arTime.getDay() + 1) + " 日："
                 + '<a href="/' + list[i].name + '">' + list[i].title + '</a></li>';
         }
-        str += "</ul>";
         aContainer.innerHTML = str;
     } else {
         aContainer.innerHTML = "载入归档页面失败（" + request.status + "），请尝试刷新页面。";
@@ -30,9 +29,11 @@ request.onload = function () {
 request.onerror = function () {
     aContainer.innerHTML = "载入归档页面失败，请尝试刷新页面。";
 };
-aContainer.innerHTML = "归档页面载入中 ...";
-request.send();
 
+if (aContainer) {
+    aContainer.innerHTML = "归档页面载入中 ...";
+    request.send();
+}
 /* ----
 
 # Kico Style 1.0.1
