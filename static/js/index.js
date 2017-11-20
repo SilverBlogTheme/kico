@@ -1,3 +1,38 @@
+var aContainer = document.getElementById("archive-container");
+var request = new XMLHttpRequest();
+request.open('POST', '/control/get_post_list', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.onload = function () {
+    if (request.status >= 200 && request.status < 400) {
+        var list = JSON.parse(request.responseText);
+        var year = 0;
+        var str = "<ul>";
+        for (var i in list) {
+            var t = new Date(list[i].time).getFullYear();
+            if (t != year) {
+                if (year != 0) {
+                    str += '</ul>';
+                }
+                year = t;
+                str += '<h2>' + year + ' 年</h2><ul>';
+            }
+            var arTime = new Date(list[i].time);
+            str += '<li>' + (arTime.getMonth() + 1) + " 月 " + (enTime.getDay() + 1) + " 日："
+                + '<a href="/' + list[i].name + '">' + list[i].title + '</a></li>';
+        }
+        str += "</ul>";
+        aContainer.innerHTML = str;
+    } else {
+        aContainer.innerHTML = "载入归档页面失败（" + request.status + "），请尝试刷新页面。";
+    }
+};
+
+request.onerror = function () {
+    aContainer.innerHTML = "载入归档页面失败，请尝试刷新页面。";
+};
+aContainer.innerHTML = "归档页面载入中 ...";
+request.send();
+
 /* ----
 
 # Kico Style 1.0.1
@@ -120,9 +155,9 @@ timeSince = function (date) {
 }
 
 var dateItem = document.getElementsByTagName("time");
-for (let i in dateItem) {
+for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
-        let enTime = new Date(dateItem[i].innerHTML);
+        var enTime = new Date(dateItem[i].innerHTML);
         dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDay() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }

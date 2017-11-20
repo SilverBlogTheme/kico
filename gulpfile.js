@@ -34,4 +34,15 @@ gulp.task('pack-js', () => {
         .pipe(gulp.dest('static/js'));
 });
 
-gulp.task('default', ['pack-js', 'pack-css']);
+gulp.task('pack-archive-js', () => {
+    return gulp.src('source/js/archive.js')
+        .pipe(minify({
+            ext: {
+                src: '.js',
+                min: '.min.js'
+            }
+        }))
+        .pipe(gulp.dest('static/js'));
+});
+
+gulp.task('default', ['pack-js', 'pack-css', 'pack-archive-js']);
