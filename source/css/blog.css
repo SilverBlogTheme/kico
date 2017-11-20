@@ -73,3 +73,8 @@ code::-webkit-scrollbar-thumb {
 code::-webkit-scrollbar-thumb:hover {
     background: #9e9e9e;
 }
+
+.section-content h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    padding-top: 0.44em;
+}
