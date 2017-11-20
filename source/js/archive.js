@@ -19,6 +19,7 @@ request.onload = function () {
                 while (true) {
                     if (new Date(list[j].time).getFullYear() == year) {
                         amount += 1;
+                        j -= 1;
                     } else {
                         break;
                     }
