@@ -9,7 +9,8 @@ gulp.task('pack-css', () => {
         .pipe(order([
             "source/css/binkic.css",
             "source/css/doc.css",
-            "source/css/blog.css"
+            "source/css/blog.css",
+            'source/css/monokai-sublime.css'
         ]))
         .pipe(concat("index.min.css"))
         .pipe(cleanCSS())
