@@ -14,7 +14,16 @@ request.onload = function () {
                     str += '</ul>';
                 }
                 year = t;
-                str += '<h2>' + year + ' 年</h2><ul>';
+                var j = i;
+                var amount = 0;
+                while (true) {
+                    if (new Date(list[j].time).getFullYear() == year) {
+                        amount += 1;
+                    } else {
+                        break;
+                    }
+                }
+                str += '<h2>' + year + ' 年（' + amount + ' 篇）</h2><ul>';
             }
             var arTime = new Date(list[i].time);
             str += '<li>' + (arTime.getMonth() + 1) + " 月 " + arTime.getDate() + " 日："
@@ -159,7 +168,7 @@ var dateItem = document.getElementsByTagName("time");
 for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
         var enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + (enTime.getDate() + 1) + " 日 " + pad(enTime.getHours()) + ":" + pad(enTime.getMinutes());
+        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + enTime.getDate() + " 日";
         dateItem[i].innerHTML = timeSince(enTime.getTime());
     }
 }
