@@ -195,7 +195,7 @@ function navtrans() {
     var header = document.getElementsByTagName("header")[0];
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-    if(scroll >= 0 || document.getElementsById('head-menu').className.indexOf("active") != -1)
+    if(scroll >= 0 || document.getElementById('head-menu').className.indexOf("active") != -1)
     {
         header.classList.add("active");
     }
