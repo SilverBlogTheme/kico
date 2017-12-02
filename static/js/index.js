@@ -46,7 +46,7 @@ if (aContainer) {
 本代码为缤奇保罗原创，并遵守 MIT 开源协议。保罗的个人博客：https://hi-paul.space
 
 ---- */
-
+/*
 // 弹框
 function alert_box(content, count_down, overlay_stat, color){
     var body = document.body;
@@ -123,7 +123,7 @@ function sw_btn(){
     }
 }
 sw_btn();
-
+*/
 if (window.console && window.console.log) {
     console.log("\n %c Kico Style %c https://www.binkic.com \n\n","color: #fff; background: #3498db; padding: 5px 0;","background: #efefef; padding: 5px 0;");
 }
@@ -186,6 +186,7 @@ function nav_btn() {
 
     nav_btn.addEventListener("click", function () {
         nav_bar.classList.toggle("active");
+        navtrans();
     });
 }
 nav_btn();
@@ -194,7 +195,7 @@ function navtrans() {
     var header = document.getElementsByTagName("header")[0];
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-    if(scroll >= 160)
+    if(scroll >= 0 || nav_bar.className.indexOf("active") != -1)
     {
         header.classList.add("active");
     }
