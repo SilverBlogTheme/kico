@@ -136,10 +136,6 @@ var gapType = [
     {max: 31536000, suffix: " 个月前"}
 ];
 
-pad = function (n) {
-    return (n < 10) ? '0' + n : n;
-}
-
 timeSince = function (date) {
     var gap = (new Date().getTime() - date) / 1000;
     var i = 0;

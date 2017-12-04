@@ -147,7 +147,7 @@ pre::-webkit-scrollbar-thumb{
 /* - 引用*/
 blockquote{
     margin: 0 0 1em;
-    font-style: oblique;
+    /*font-style: oblique;*/
     background: #f5fafd;
     padding: 1em 1em 1em 2em;
     border-left: 5px #3498db solid;
