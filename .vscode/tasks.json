@@ -7,11 +7,6 @@
             "label": "Build",
             "type": "shell",
             "command": "./scripts/git-add.sh"
-        },
-        {
-            "label": "PushDev",
-            "type": "shell",
-            "command": "./scripts/git-pushdev.sh"
         }
     ]
 }
