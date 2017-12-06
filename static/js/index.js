@@ -160,7 +160,10 @@ for (var i in dateItem) {
     }
 }
 
-hljs.initHighlightingOnLoad();
+document.addEventListener('DOMContentLoaded', function() {
+    hljs.initHighlightingOnLoad();
+	bPlayer.scan();
+}, false);
 
 /* ----
 
