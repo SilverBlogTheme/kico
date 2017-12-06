@@ -33,5 +33,4 @@ for (var i in dateItem) {
 
 document.addEventListener('DOMContentLoaded', function() {
     hljs.initHighlightingOnLoad();
-	bPlayer.scan();
 }, false);
