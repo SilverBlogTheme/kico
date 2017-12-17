@@ -22,15 +22,14 @@ timeSince = function (date) {
     }
 }
 
-var dateItem = document.getElementsByTagName("time");
-for (var i in dateItem) {
-    if (dateItem[i].innerHTML != "") {
-        var enTime = new Date(dateItem[i].innerHTML);
-        dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + enTime.getDate() + " 日";
-        dateItem[i].innerHTML = timeSince(enTime.getTime());
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
+    var dateItem = document.getElementsByTagName("time");
+    for (var i in dateItem) {
+        if (dateItem[i].innerHTML != "") {
+            var enTime = new Date(dateItem[i].innerHTML);
+            dateItem[i].title = enTime.getFullYear() + " 年 " + (enTime.getMonth() + 1) + " 月 " + enTime.getDate() + " 日";
+            dateItem[i].innerHTML = timeSince(enTime.getTime());
+        }
+    }
     hljs.initHighlightingOnLoad();
 }, false);

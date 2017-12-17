@@ -11,11 +11,14 @@
 
 ---- */
 
+if (window.console && window.console.log) {
+    console.log("\n %c Kico Style %c https://www.binkic.com \n\n", "color: #fff; background: #3498db; padding: 5px 0;", "background: #efefef; padding: 5px 0;");
+}
+
 // 菜单按钮
 function nav_btn() {
     var nav_btn = document.getElementsByClassName('toggle-btn')[0];
     var nav_bar = document.getElementsByClassName('head-menu')[0];
-
     nav_btn.addEventListener("click", function () {
         nav_bar.classList.toggle("active");
         navtrans();
@@ -26,13 +29,9 @@ nav_btn();
 function navtrans() {
     var header = document.getElementsByTagName("header")[0];
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-    if(scroll > 0 || document.getElementById('head-menu').className.indexOf("active") != -1)
-    {
+    if (scroll > 0 || document.getElementById('head-menu').className.indexOf("active") != -1) {
         header.classList.add("active");
-    }
-    else
-    {
+    } else {
         header.classList.remove("active");
     }
 }
