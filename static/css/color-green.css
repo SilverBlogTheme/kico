@@ -7,6 +7,6 @@ blockquote {
 }
 
 table.fill > thead > tr > th, table.fill > thead > tr > td, em, .sw-btn.active.sw-btn:before,
-header .head-title, .docs-title, .show-column > *[class*="col-"] p, footer, body {
+header, .docs-title, .show-column > *[class*="col-"] p, footer, body {
     background: #33be21;
 }
