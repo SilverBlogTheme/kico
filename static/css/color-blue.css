@@ -6,7 +6,11 @@ blockquote {
     border-left: 5px #3498db solid;
 }
 
-table.fill > thead > tr > th, table.fill > thead > tr > td, em, .sw-btn.active.sw-btn:before,
-header .head-title .site-title, .docs-title, .show-column > *[class*="col-"] p, footer, body {
+table.fill > thead > tr > th, table.fill > thead > tr > td, em, 
+.sw-btn.active.sw-btn:before, .docs-title, .show-column > *[class*="col-"] p, footer, body {
     background: #3498db;
+}
+
+.docs-title p {
+    color: #c1e0f4;
 }

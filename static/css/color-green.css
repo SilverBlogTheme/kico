@@ -10,3 +10,7 @@ table.fill > thead > tr > th, table.fill > thead > tr > td, em,
 .sw-btn.active.sw-btn:before, .docs-title, .show-column > *[class*="col-"] p, footer, body {
     background: #33be21;
 }
+
+.docs-title p {
+    color: #c1f4ca;
+}
