@@ -1,12 +1,12 @@
 a, cite {
-    color: #2a941c;
+    color: #33be21;
 }
 
 blockquote {
-    border-left: 5px #2a941c solid;
+    border-left: 5px #33be21 solid;
 }
 
 table.fill > thead > tr > th, table.fill > thead > tr > td, em, .sw-btn.active.sw-btn:before,
-header .head-title .site-title, .docs-title, .show-column > *[class*="col-"] p, footer, body {
-    background: #2a941c;
+header .head-title, .docs-title, .show-column > *[class*="col-"] p, footer, body {
+    background: #33be21;
 }
