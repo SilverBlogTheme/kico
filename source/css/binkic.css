@@ -151,6 +151,7 @@ blockquote{
     background: #f5fafd;
     padding: 1em 1em 1em 2em;
     border-left: 5px #3498db solid;
+    word-break: break-all;
 }
 
 cite{
