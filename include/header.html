@@ -1,11 +1,8 @@
 {% if page_info.title=="index" %}
     {% set title=system_config.Project_Name %}
-{% else %}
-    {% set title=page_info.title %}
-{% endif %}
-{% if page_info.title=="index" %}
     {% set description=system_config.Project_Description %}
 {% else %}
+    {% set title=page_info.title %}
     {% set description=page_info.excerpt %}
 {% endif %}
 <!DOCTYPE html>
