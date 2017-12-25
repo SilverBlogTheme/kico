@@ -16,7 +16,7 @@
         </div>{% endfor %}
         <div class="wrap min page-nav">
             {% if now_page!=1 %}<a class="nav-link nav-prev" href="/index/p/{{ now_page - 1 }}{% if static %}.html{% endif %}">上一页</a>{% endif %}
-            {% if now_page!=page_row and page_row !=1 %}<a class="nav-link nav-next" href="/index/p/{{ now_page + 1 }}{% if static %}.html{% endif %}">下一页</a>{% endif %}</div>
+            {% if now_page!=page_row and page_row !=1 %}<a class="nav-link nav-next" href="/index/p/{{ now_page + 1 }}{% if static %}.html{% endif %}">下一页</a>{% endif %}
         </div>
     </div>
 </main>
