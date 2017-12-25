@@ -106,7 +106,7 @@ a, h1, h2, h3, h4, h5, h6, .btn{
 }
 
 /* - 代码*/
-pre, code{
+pre, code, textarea{
     font-size: 1em;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace, "微软雅黑";
 }
