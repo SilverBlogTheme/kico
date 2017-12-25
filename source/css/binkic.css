@@ -652,6 +652,8 @@ iframe{
     padding: .8em 1.5em;
     display: inline-block;
     border: 1px solid transparent;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 .btn:hover{
     color: inherit;
