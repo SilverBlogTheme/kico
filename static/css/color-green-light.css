@@ -1,14 +1,14 @@
 a, cite {
-    color: #217746;
+    color: #3cdc82;
 }
 
 blockquote {
-    border-left: 5px #217746 solid;
+    border-left: 5px #3cdc82 solid;
 }
 
 table.fill > thead > tr > th, table.fill > thead > tr > td, em, 
 .sw-btn.active.sw-btn:before, .docs-title, .show-column > *[class*="col-"] p, footer, body {
-    background: #217746;
+    background: #3cdc82;
 }
 
 .docs-title p {
