@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
-
+templates_name="kico"
 if [ $(basename `pwd`) != "templates" ];then
     echo "[Error] Please do this in the templates directory!"
     exit
 fi
-if [ ! -d "kico" ]; then
-    git clone https://github.com/SilverBlogTheme/kico.git --depth 1
-    ln -sv ../kico/static ./static/kico
-    echo "Remember, if you want to make local changes, edit files in /templates/kico/source folder, then use gulp to build static files!"
+if [ ! -d ${templates_name} ]; then
+    git clone https://github.com/SilverBlogTeam/${templates_name}.git
+fi
+ln -sv ../${templates_name}/static ./static/${templates_name}
+cd ${templates_name}
+if [ -f "config.json" ]; then
+    cp config.example.json config.json
+    vim config.json
 fi
