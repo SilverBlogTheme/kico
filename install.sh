@@ -7,6 +7,6 @@ fi
 if [ ! -d "kico" ]; then
     git clone https://github.com/SilverBlogTheme/kico.git --depth 1
     cd kico
-    ln -s $(pwd)/static ../static/kico
+    ln -s ./static ../static/kico
     echo "Remember, if you want to make local changes, edit files in /templates/kico/source folder, then use gulp to build static files!"
 fi
