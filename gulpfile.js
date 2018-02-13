@@ -5,7 +5,7 @@ let order = require("gulp-order");
 let concat = require("gulp-concat");
 
 gulp.task('pack-css', () => {
-    return gulp.src('source/css/entry.css')
+    return gulp.src('source/css/index.css')
         .pipe(cleanCSS())
         .pipe(gulp.dest('static/css'));
 });
