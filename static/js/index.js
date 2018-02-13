@@ -34,27 +34,23 @@ if (aContainer) {
     aContainer.innerHTML = "归档页面载入中 ...";
     request.send();
 }
-var gapType = [
-    {max: 60, suffix: " 秒前"},
-    {max: 3600, suffix: " 分钟前"},
-    {max: 86400, suffix: " 小时前"},
-    {max: 604800, suffix: " 天前"},
-    {max: 2592000, suffix: " 周前"},
-    {max: 31536000, suffix: " 个月前"}
-];
-
 timeSince = function (date) {
     var gap = (new Date().getTime() - date) / 1000;
-    var i = 0;
-    while (true) {
-        if (gap >= ((i <= 0) ? 0 : gapType[i - 1].max) && gap < gapType[i].max) {
-            return Math.floor(gap / ((i <= 0) ? 1 : gapType[i - 1].max)) + gapType[i].suffix;
-        } else if (gap > gapType[gapType.length - 1].max || gap < 0 || i >= gapType.length) {
-            var ds = new Date(date);
-            return ds.getFullYear() + " 年 " + (ds.getMonth() + 1) + " 月 " + ds.getDate() + " 日";
-        } else {
-            i += 1;
-        }
+    if (gap >= 0 && gap < 60) {
+        return Math.floor(gap) + " 秒前";
+    } else if (gap >= 60 && gap < 3600) {
+        return Math.floor(gap / 60) + " 分钟前";
+    } else if (gap >= 3600 && gap < 86400) {
+        return Math.floor(gap / 3600) + " 小时前";
+    } else if (gap >= 86400 && gap < 604800) {
+        return Math.floor(gap / 86400) + " 天前";
+    } else if (gap >= 604800 && gap < 2592000) {
+        return Math.floor(gap / 604800) + " 周前";
+    } else if (gap >= 2592000 && gap < 31536000) {
+        return Math.floor(gap / 2592000) + " 个月前";
+    } else {
+        var ds = new Date(date);
+        return ds.getFullYear() + " 年 " + (ds.getMonth() + 1) + " 月 " + ds.getDate() + " 日";
     }
 }
 
