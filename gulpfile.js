@@ -27,5 +27,12 @@ gulp.task('pack-js', () => {
         .pipe(gulp.dest('static/js'));
 });
 
+gulp.task('copy-release', () => {
+    gulp.src('./*.html').pipe(gulp.dest('./release/'));
+    gulp.src('./*.md').pipe(gulp.dest('./release/'));
+    gulp.src('./LICENSE').pipe(gulp.dest('./release/'));
+    gulp.src('./static/**/*').pipe(gulp.dest('./release/static/'));
+    gulp.src('./include/**/*').pipe(gulp.dest('./release/include/'));
+});
 
-gulp.task('default', ['pack-js', 'pack-css']);
+gulp.task('default', ['pack-js', 'pack-css', 'copy-release']);
