@@ -2,8 +2,6 @@
 
 由 Kico Style 修改而来的博客主题，并应用到 SilverBlog 上。
 
-![首页图](https://raw.githubusercontent.com/SilverBlogTheme/kico/master/kico-preview.png)
-
 ## 安装
 
 ``` bash
@@ -24,6 +22,10 @@ cd templates/kico
 git pull
 ```
 
-# 许可 \(License\)
+## 开发
+
+本主题在 `SilverBlogTeam` 的仓库里的版本仅用于公开发行，如果需要参与开发，并使用 gulp 编译资源文件，请移步至 [开发仓库](https://github.com/tcdw/kico-dev)。
+
+## 许可 \(License\)
 
 主题使用 BSD3 许可证，但 kico 框架本体使用 MIT 许可证。
